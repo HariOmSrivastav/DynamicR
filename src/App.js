@@ -1,23 +1,26 @@
 import logo from './logo.svg';
 import './App.css';
 
+function changeBackgroundColor(color) {
+  const name = document.querySelector('.body');
+  if(name){
+    name.style.backgroundColor = color;
+  }
+}
+
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
+    <div className='body'>
+      <div className='logo'>
         <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      </div>
+      <h6 className='r'>REACT</h6>
+      <footer className='myfoot'>
+        <button className='btn' onClick={() => changeBackgroundColor('cadetblue')}>LBlue</button>
+        <button className='btn' onClick={() => changeBackgroundColor('steelblue')}>Steel</button>
+        <button className='btn' onClick={() => changeBackgroundColor('teal')}>Teal</button>
+        <button className='btn' onClick={() => changeBackgroundColor('palegreen')}>LGreen</button>
+      </footer>
     </div>
   );
 }
